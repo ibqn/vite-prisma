@@ -1,4 +1,4 @@
-import { User } from '@/types'
+import { type User } from '@/types'
 import { MessageDisplay } from './message-display'
 
 type Props = {
