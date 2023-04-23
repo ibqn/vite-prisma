@@ -1,16 +1,6 @@
-import SchemaBuilder from '@pothos/core'
+import { builder } from './builder'
 
-const builder = new SchemaBuilder({})
-
-builder.queryType({
-  fields: (t) => ({
-    hello: t.string({
-      args: {
-        name: t.arg.string(),
-      },
-      resolve: (parent, { name }) => `hello, ${name || 'World'}`,
-    }),
-  }),
-})
+import './models/message'
+import './models/user'
 
 export const schema = builder.toSchema()

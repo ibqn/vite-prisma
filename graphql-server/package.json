@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development ts-node-dev --exit-child --respawn src/main.ts",
-    "start": "ts-node src/main.ts"
+    "start": "ts-node src/main.ts",
+    "generate": "pnpm prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@pothos/plugin-prisma": "^3.47.2",
     "@types/node": "^18.15.13",
     "cross-env": "^7.0.3",
     "prisma": "^4.13.0",
