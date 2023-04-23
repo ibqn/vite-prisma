@@ -22,7 +22,7 @@ async function main() {
     console.log(`Created user with id: ${user.id}`)
   }
 
-  console.log(`Seeding finished.`)
+  console.log(`🌱 Seeding finished.`)
 }
 
 main()
