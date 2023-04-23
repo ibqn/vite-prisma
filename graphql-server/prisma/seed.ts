@@ -6,11 +6,9 @@ const prisma = new PrismaClient()
 async function main() {
   console.log(`Start seeding ...`)
 
-  // Delete all `User` and `Message` records
   await prisma.message.deleteMany({})
   await prisma.user.deleteMany({})
 
-  // (Re-)Create dummy `User` and `Message` records
   for (const data of userData) {
     const user = await prisma.user.create({
       data: {
@@ -20,8 +18,10 @@ async function main() {
         },
       },
     })
-    console.log(`Created user with id: ${data.name}`)
+
+    console.log(`Created user with id: ${user.id}`)
   }
+
   console.log(`Seeding finished.`)
 }
 

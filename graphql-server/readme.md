@@ -11,10 +11,6 @@ pnpm add -D --save-exact typescript @types/node ts-node ts-node-dev cross-env
 ```
 
 ```shell
-pnpm add @graphql-tools/schema graphql
-```
-
-```shell
 pnpm add -D prisma
 ```
 
@@ -32,4 +28,12 @@ pnpm prisma db seed
 
 ```shell
 pnpm prisma studio
+```
+
+```shell
+pnpm add graphql-yoga @pothos/core
+```
+
+```shell
+pnpm add  graphql-scalars
 ```
